@@ -1,17 +1,27 @@
 import Login from "./Login";
-import Register from "./Register";
 import Profile from "./Profile";
 import ProtectedRoute from "./ProtectedRoute";
+import Register from "./Register";
 
+import { useEffect, useState } from "react";
 import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
   Navigate,
+  Route,
+  BrowserRouter as Router,
+  Routes,
 } from "react-router-dom";
-import { useState } from "react";
 function App() {
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    } else {
+      setUser(null);
+    }
+  }, []);
+
   return (
     <Router>
       <div className="App">
