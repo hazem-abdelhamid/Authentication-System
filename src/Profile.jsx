@@ -27,9 +27,9 @@ const Profile = ({ user }) => {
     return <CircularProgress />;
   } else {
     return (
-      <div className="h-screen flex items-center justify-center">
-        <div className="bg-white p-8 rounded-lg shadow-2xl text-center max-w-sm w-full">
-          <h1 className="text-2xl font-bold mb-4">
+      <div className="h-screen flex items-center justify-center p-4 sm:p-6 md:p-8">
+        <div className="bg-white p-6 sm:p-8 md:p-10 rounded-lg shadow-2xl text-center max-w-xs sm:max-w-sm md:max-w-md w-full">
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
             Welcome to your profile {user.firstName.toUpperCase()}{" "}
             {user.lastName.toUpperCase()}
           </h1>

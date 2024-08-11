@@ -1,7 +1,7 @@
+// This component designed to collect the data and send it to the backend
 import { Button, CircularProgress, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// This component designed to collect the data and send it to the backend
 import { yupResolver } from "@hookform/resolvers/yup";
 import Cookies from "js-cookie";
 import { useForm } from "react-hook-form";
@@ -46,11 +46,13 @@ const Login = ({ setUser }) => {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center">
-      <div className="p-6 max-w-md w-full mx-auto text-center border-2 border-sky-500 rounded-lg shadow-2xl">
+    <div className="h-screen flex items-center justify-center p-4 sm:p-6 md:p-8">
+      <div className="p-4 sm:p-6 md:p-8 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg w-full mx-auto text-center border-2 border-sky-500 rounded-lg shadow-2xl">
         <form onSubmit={handleSubmit(onSubmit)}>
-          <h2 className="text-2xl my-6">Login</h2>
-          <div className="flex flex-col space-y-5">
+          <h2 className="text-xl sm:text-2xl md:text-3xl my-4 sm:my-6">
+            Login
+          </h2>
+          <div className="flex flex-col space-y-4 sm:space-y-5 md:space-y-6">
             <TextField
               label="Username"
               variant="outlined"

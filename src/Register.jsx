@@ -1,4 +1,3 @@
-// This component designed to collect the data and send it to the backend
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Button, CircularProgress, TextField, Typography } from "@mui/material";
 import { useState } from "react";
@@ -48,9 +47,11 @@ const Register = () => {
   };
 
   return (
-    <div className="p-2 max-w-sm my-5 mx-auto text-center border-2 border-sky-500 rounded-lg px-6 shadow-2xl">
+    <div className="p-4 sm:p-6 md:p-8 lg:p-10 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg my-5 mx-auto text-center border-2 border-sky-500 rounded-lg shadow-2xl">
       <form onSubmit={handleSubmit(onSubmit)}>
-        <h2 className="text-2xl my-6">Register Page</h2>
+        <h2 className="text-xl sm:text-2xl md:text-3xl my-4 sm:my-6">
+          Register Page
+        </h2>
         <div className="flex flex-col space-y-5">
           <TextField
             label="First Name"
