@@ -9,3 +9,5 @@ A fully functional authentication system built with **React**, **React Router**,
 - **Material UI (MUI)** – Pre-built UI components.
 - **React Hook Form** – Form handling with performance optimization.
 - **Yup** – Schema-based form validation.
+- **Cookies (js-cookie)** – Secure token storage.
+- **Protected Routes** – Restrict access to authenticated users.
